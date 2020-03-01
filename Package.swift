@@ -12,7 +12,7 @@ let package = Package(
         .library(name: "VaporGoogleCloudTasksProvider", targets: ["VaporGoogleCloudTasksProvider"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/vapor/vapor", from: "4.0.0-beta.4.2"),
+        .package(url: "https://github.com/vapor/vapor", from: "4.0.0-beta.3.16"),
         .package(url: "https://github.com/barisatamer/SwiftGoogleCloudTasks.git", from: "0.0.2"),
     ],
     targets: [
