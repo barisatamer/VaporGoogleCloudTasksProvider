@@ -1,4 +1,4 @@
-// swift-tools-version:5.1
+// swift-tools-version:5.2
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -6,21 +6,21 @@ import PackageDescription
 let package = Package(
     name: "VaporGoogleCloudTasksProvider",
     platforms: [
-       .macOS(.v10_14)
+       .macOS(.v10_15)
     ],
     products: [
         .library(name: "VaporGoogleCloudTasksProvider", targets: ["VaporGoogleCloudTasksProvider"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/vapor/vapor", from: "4.0.0-beta.3.16"),
-        .package(url: "https://github.com/barisatamer/SwiftGoogleCloudTasks.git", from: "0.0.2"),
+        .package(url: "https://github.com/vapor/vapor.git", from: "4.0.0-rc"),
+        .package(url: "https://github.com/barisatamer/SwiftGoogleCloudTasks.git", from: "0.0.3"),
     ],
     targets: [
         .target(
             name: "VaporGoogleCloudTasksProvider",
             dependencies: [
-                "Vapor",
-                "SwiftGoogleCloudTasks",
+                .product(name: "Vapor", package: "vapor"),
+                .product(name: "SwiftGoogleCloudTasks", package: "SwiftGoogleCloudTasks")
             ]),
         .testTarget(
             name: "VaporGoogleCloudTasksProviderTests",
