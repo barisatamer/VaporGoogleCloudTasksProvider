@@ -13,7 +13,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/vapor/vapor.git", from: "4.0.0-rc"),
-        .package(url: "https://github.com/barisatamer/SwiftGoogleCloudTasks.git", from: "0.0.6"),
+        .package(url: "https://github.com/barisatamer/SwiftGoogleCloudTasks.git", from: "0.0.7"),
     ],
     targets: [
         .target(
